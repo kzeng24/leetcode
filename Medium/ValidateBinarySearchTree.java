@@ -29,6 +29,7 @@ class Solution {
         // return checkNodeBoundary(root, null, null);
     }
     
+    // way 1
     public boolean checkChildrenBoundary(TreeNode root, TreeNode lowLimit, TreeNode highLimit) {
         if (root == null) {
             return true;
@@ -40,6 +41,7 @@ class Solution {
         return helper(root.left, lowLimit, root) && helper(root.right, root, highLimit);
     }
     
+    // way 2
     public boolean checkNodeBoundary(TreeNode root, TreeNode lowLimit, TreeNode highLimit) {
         if (root == null) {
             return true;
