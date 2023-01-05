@@ -51,4 +51,10 @@ class Solution {
         }
         return helper2(root.left, lowLimit, root) && helper2(root.right, root, highLimit);
     }
+    
+    /*
+    Thought process: must make sure node values are between high and low boundaries
+    When going left, the node must be smaller than the root node. When going right, node must be bigger than root node.
+    While we update one boundary, the other boundary remains unchanged -> and this ensures that the values are in bounds
+    */
 }
